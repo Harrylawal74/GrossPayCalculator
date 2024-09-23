@@ -17,8 +17,17 @@ public class GrossPayCalculator {
         Scanner scanner = new Scanner(System.in);
         hours = scanner.nextInt();
 
-        //double is a decimal data type
-        double payRate = 25.5;
+        //variable declaration - double as mau be a decimal data type
+        double payRate = 0;
+        //outputs question to user, prompting them to answer.
+        System.out.println("What is your pay rate");
+
+        //takes input from user and applies value to "payRate" variable.
+        //No need to declare scanner again as it has already been used
+        payRate = scanner.nextDouble();
+
+        //closes scanner
+        scanner.close();
 
         //Multiplies payRate and hours
         double grossPay = hours * payRate;
